@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root 'lists#index'
+  root :to => 'lists#index'
+
   resources :lists do
-    resources :tasks
+    resources :tasks, :except => [:show, :index]
   end
 end
