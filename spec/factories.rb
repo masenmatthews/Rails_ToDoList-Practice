@@ -1,3 +1,11 @@
+FactoryBot.define do
+  factory(:task) do
+    name('Knit the sock monkey')
+    priority(1)
+
+  end
+end
+
 describe Task do
   it 'is private by default' do
     task = FactoryBot.create(:task)
